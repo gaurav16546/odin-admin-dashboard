@@ -6,6 +6,7 @@
 body,
 html {
   min-height: 100%;
+  font-family: "Times New Roman", Times, serif;
 }
 .container {
   display: grid;
@@ -14,6 +15,8 @@ html {
   /* height: 100vh; */
 }
 .sidebar {
+  background-color: #3967e6;
+  color: white;
   grid-area: 1 / 1 / -1 / 2;
   display: grid;
   grid-template-columns: 1fr;
@@ -23,12 +26,104 @@ html {
 .dashboard-caption {
   margin-left: 30px;
   align-self: center;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+}
+.dashboard-caption p::before {
+  content: "";
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: url("icons/view-dashboard.svg") no-repeat;
+  background-size: contain;
+  vertical-align: -28%;
+  margin-right: 10px;
 }
 .sidebar > div > ul > li {
   list-style: none;
   margin-left: 30px;
   padding: 5px 0 5px 0;
+  font-size: 1.5rem;
+}
+.side-text1 li:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/home.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.side-text1 li:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/account.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.side-text1 li:nth-child(3)::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/message.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.side-text1 li:nth-child(4)::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/history.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.side-text1 li:nth-child(5)::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/calendar-check.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.side-text1 li:nth-child(6)::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/account-multiple.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.side-text2 li:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/cog.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.side-text2 li:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/face-agent.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.side-text2 li:nth-child(3)::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("icons/shield-check.svg") no-repeat;
+  background-size: contain;
+  margin-right: 5px;
 }
 .navigation {
   grid-area: 1 / 2 / 2 / -1;
@@ -37,6 +132,7 @@ html {
   grid-auto-rows: 0;
   grid-template-rows: 50px 50px;
   column-gap: 33px;
+  padding: 15px;
 }
 .form-wrapper {
   padding-right: 10px;
@@ -101,7 +197,7 @@ html {
   margin-bottom: 25px;
   padding: 25px;
 }
-.main-content div:first-child {
+.main-content > div:first-child {
   grid-area: 1 / 1 / 2 / -1;
   margin-bottom: 15px;
   /* height: 5px; */
