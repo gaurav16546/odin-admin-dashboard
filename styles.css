@@ -11,7 +11,8 @@ html {
 .container {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 195px 1fr;
+  background-color: #e2e8f0;
   /* height: 100vh; */
 }
 .sidebar {
@@ -31,8 +32,8 @@ html {
 .dashboard-caption p::before {
   content: "";
   display: inline-block;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   background: url("icons/view-dashboard.svg") no-repeat;
   background-size: contain;
   vertical-align: -28%;
@@ -130,9 +131,12 @@ html {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-auto-rows: 0;
-  grid-template-rows: 50px 50px;
+  grid-template-rows: 1fr 1fr;
   column-gap: 33px;
   padding: 15px;
+  height: fit-content;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
 }
 .form-wrapper {
   padding-right: 10px;
@@ -145,21 +149,45 @@ html {
   border: none;
   width: 60%;
   border-radius: 5px;
+  padding-left: 20px;
+  background: rgb(212, 195, 195)
+    url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 20px;
 }
+
 .noti {
-  display: flex;
+  display: grid;
   gap: 15px;
-  align-self: center;
+  grid-template-columns: repeat(2, 1fr) 10fr;
+  justify-content: center;
+  align-items: center;
 }
 .noti :nth-child(1) {
   border-radius: 50%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 4px;
+}
+.noti :nth-child(1) img {
+  height: 35px;
+  width: 35px;
 }
 .noti :nth-child(2) {
   border-radius: 50%;
-  border: solid 1px green;
+  /* border: solid 1px green; */
   padding: 10px;
+}
+.noti :nth-child(2) img {
+  height: 45px;
+  width: 45px;
+  /* padding-bottom: 10px; */
+}
+.noti:nth-child(3) {
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.noti:nth-child(3) strong {
+  font-size: 1.5rem;
 }
 .username {
   display: flex;
@@ -167,12 +195,20 @@ html {
 }
 .username span {
   border-radius: 50%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 11px;
   margin-right: 10px;
 }
+.username span img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
 .username div p:nth-child(1) {
-  font-size: 0.8rem;
+  font-size: 01rem;
+}
+.username div p:nth-child(2) {
+  font-size: 1.5rem;
 }
 .user-buttons {
   display: grid;
@@ -183,9 +219,14 @@ html {
   /* grid-auto-flow: column; */
 }
 .user-buttons > button {
+  background: blue;
   border-radius: 5px;
   border: none;
   height: 35px;
+  color: white;
+}
+.user-buttons > button:hover {
+  background-color: rgb(83, 83, 236);
 }
 .content {
   display: grid;
@@ -196,6 +237,7 @@ html {
   margin-top: 25px;
   margin-bottom: 25px;
   padding: 25px;
+  background-color: #e2e8f0;
 }
 .main-content > div:first-child {
   grid-area: 1 / 1 / 2 / -1;
