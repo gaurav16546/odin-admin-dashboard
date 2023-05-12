@@ -296,6 +296,7 @@ html {
   display: grid;
   padding-left: 25px;
   padding-right: 25px;
+  margin-bottom: 15px;
 }
 .announcement div {
   overflow: hidden;
@@ -311,4 +312,22 @@ html {
 }
 .announcement :last-child {
   margin-top: 5px;
+}
+.trending {
+  background-color: white;
+  box-shadow: 1px 1px 5px rgb(10, 10, 10);
+  border-radius: 20px;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(1fr, 4);
+  display: grid;
+  padding: 25px;
+}
+.trend {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.trend img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
 }
