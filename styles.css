@@ -239,23 +239,46 @@ html {
   padding: 25px;
   background-color: #e2e8f0;
 }
-.main-content > div:first-child {
-  grid-area: 1 / 1 / 2 / -1;
-  margin-bottom: 15px;
-  /* height: 5px; */
-}
 .main-content {
   display: grid;
   grid-area: 1 / 1 / -1 / -2;
   grid-template-rows: 15px repeat(auto-fit, 220px);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  column-gap: 10px;
+  column-gap: 20px;
   row-gap: 5px;
+}
+.main-content > div:first-child {
+  grid-area: 1 / 1 / 2 / -1;
+  margin-bottom: 15px;
+  /* height: 5px; */
 }
 
 .main-content > :nth-child(n + 2) {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background-color: white;
   height: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 5fr 2fr;
+  grid-auto-flow: 0;
+  border-left: orange 10px solid;
+}
+.project h3 {
+  margin-left: 25px;
+  margin-top: auto;
+}
+.project p {
+  margin-left: 25px;
+}
+.project > div {
+  margin-left: auto;
+  margin-right: 55px;
+}
+.project > div > img {
+  height: 25px;
+  width: 25px;
 }
 .side-content {
   display: grid;
@@ -264,7 +287,28 @@ html {
   grid-template-rows: 1fr 15fr 1fr 15fr;
   gap: 5px;
 }
-.announcement,
-.trending {
-  border: 1px solid yellowgreen;
+.announcement {
+  background-color: white;
+  box-shadow: 1px 1px 5px rgb(10, 10, 10);
+  border-radius: 20px;
+  grid-template-columns: 1;
+  grid-template-rows: 1fr 65px 1fr;
+  display: grid;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.announcement div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.announcement > *:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+.announcement :first-child {
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+.announcement :last-child {
+  margin-top: 5px;
 }
